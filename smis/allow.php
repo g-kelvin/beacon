@@ -11,10 +11,10 @@ if($con){
         $res = mysqli_query($con,$qry);
         if(mysqli_num_rows($res)>0){
             while ($row= mysqli_fetch_assoc($res)){
-                echo "Login Successful".header('refresh:0; url=https://www.nairobiprecision.co.ke/smis/home.php');}}
+                echo "Login Successful".header('refresh:0; url=https://www.thebeaconacademy.sc.ke/smis/home.php');}}
                 else
                 {
-                 echo "<center style ='color: red'><h3><br><br>Kindly Try again</h3></center><br><br>".header('refresh:2; url=https://www.nairobiprecision.co.ke/smis/login.php');
+                 echo "<center style ='color: red'><h3><br><br>Kindly Try again</h3></center><br><br>".header('refresh:2; url=https://www.thebeaconacademy.sc.ke/smis/login.php');
                 }
 
   

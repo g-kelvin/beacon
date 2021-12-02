@@ -48,7 +48,7 @@ include "config.php";
 
 <body>
   <!-- container section start -->
-  <section id="container" class="">
+  <section id="container"  class="">
     <!--header start-->
 
     <header class="header dark-bg">

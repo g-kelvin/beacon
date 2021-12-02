@@ -6,13 +6,14 @@ include "config.php";
 <html lang="en">
 
 <head>
- <meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <meta name="description" content="The Beacon Academy Embu - Best Private school for your Kid.">
   <meta name="author" content="GeeksLabs">
-  <meta name="keyword" content="Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) ">
-  <link rel="shortcut icon" href="../assets/img/favicon.png">
-   <title>Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) </title>
+  <meta name="keyword" content="The Beacon Academy Embu - Best Private school for your Kid.">
+  <link rel="shortcut icon" href="../images/favicon.png">
+
+  <title>The Beacon Academy Embu - Best Private school for your Kid. </title>
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
@@ -56,7 +57,7 @@ include "config.php";
       </div>
 
       <!--logo start-->
-      <a href="home.php" class="logo">Nairobi Precision <span class="lite">SMIS</span></a>
+       <a href="home.php" class="logo">The Beacon Academy <span class="lite">SMIS</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
@@ -304,8 +305,8 @@ include "config.php";
       <th scope="col">Admission No</th>
       <th scope="col">Name</th>
       <th scope="col">Campus</th>
-      <th scope="col">Course</th>
-      <th scope="col">Course Duration</th>
+      <th scope="col">Grade/Grade</th>
+      <th scope="col">Parent Name</th>
       <th scope="col">Phone No</th>
       <th scope="col">Email</th>
       <th scope="col">Fees Paid</th>
@@ -325,11 +326,11 @@ include "config.php";
       while($rows= mysqli_fetch_assoc($rest)){
          ?> 
          <tr>
-            <td> <?php echo $rows['adminno'];  ?></td>
+           <td> <?php echo $rows['adminno'];  ?></td>
             <td> <?php echo $rows['fname']." ".$rows['lname'];  ?></td>
             <td> <?php echo $rows['campus'];  ?></td>
             <td> <?php echo $rows['course'];  ?></td>
-            <td> <?php echo $rows['course_duration'];  ?></td>
+              <td> <?php echo $rows['idno'];  ?></td>
             <td> <?php echo $rows['tel'];  ?></td>
             <td> <?php echo $rows['email'];  ?></td>
             <td> <?php echo $rows['fees_paid'];  ?></td>

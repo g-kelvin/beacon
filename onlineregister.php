@@ -93,7 +93,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register</a>
                             <ul class="dropdown-menu">
                                 <li><a href="register.html">Register</a></li>
-                                <li><a href="login.html">Login</a></li>
+                                <li><a href="smis/login.php">Login</a></li>
                                 
                             </ul>
                         </li>
@@ -123,7 +123,7 @@
         <div class="container">
           
            <?php 
-$con= mysqli_connect("localhost","root","","nairobi_precision");
+$con= mysqli_connect("localhost","thebeaco_admin", "7RWMt24Yv+v9*k","thebeaco_thebeacon");
 
 if($con){
   if(isset($_POST['submit'])){

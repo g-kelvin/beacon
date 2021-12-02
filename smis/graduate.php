@@ -308,11 +308,11 @@ include "config.php";
 <table class="table table-striped table-dark">
   <thead>
     <tr>
-      <th scope="col">Admission No</th>
+       <th scope="col">Admission No</th>
       <th scope="col">Name</th>
       <th scope="col">Campus</th>
-      <th scope="col">Course</th>
-      <th scope="col">Course Duration</th>
+      <th scope="col">Grade/Grade</th>
+      <th scope="col">Parent Name</th>
       <th scope="col">Phone No</th>
       <th scope="col">Email</th>
       <th scope="col">Fees Paid</th>
@@ -331,11 +331,11 @@ include "config.php";
       while($rows= mysqli_fetch_assoc($rest)){
          ?> 
          <tr>
-            <td> <?php echo $rows['adminno'];  ?></td>
+           <td> <?php echo $rows['adminno'];  ?></td>
             <td> <?php echo $rows['fname']." ".$rows['lname'];  ?></td>
             <td> <?php echo $rows['campus'];  ?></td>
             <td> <?php echo $rows['course'];  ?></td>
-            <td> <?php echo $rows['course_duration'];  ?></td>
+              <td> <?php echo $rows['idno'];  ?></td>
             <td> <?php echo $rows['tel'];  ?></td>
             <td> <?php echo $rows['email'];  ?></td>
             <td> <?php echo $rows['fees_paid'];  ?></td>
