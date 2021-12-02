@@ -8,11 +8,12 @@ include "config.php";
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <meta name="description" content="The Beacon Academy Embu - Best Private school for your Kid.">
   <meta name="author" content="GeeksLabs">
-  <meta name="keyword" content="Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) ">
-  <link rel="shortcut icon" href="../assets/img/favicon.png">
-   <title>Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) </title>
+  <meta name="keyword" content="The Beacon Academy Embu - Best Private school for your Kid.">
+  <link rel="shortcut icon" href="../images/favicon.png">
+
+  <title>The Beacon Academy Embu - Best Private school for your Kid. </title>
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
@@ -56,7 +57,7 @@ include "config.php";
       </div>
 
       <!--logo start-->
-     <a href="home.php" class="logo">Nairobi Precision <span class="lite">SMIS</span></a>
+     <a href="home.php" class="logo">The Beacon Academy <span class="lite">SMIS</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
@@ -221,7 +222,7 @@ include "config.php";
           <li class="">
             <a class="" href="home.php">
                           <i class="icon_house_alt"></i>
-                          <span>Dashboard</span>
+                         <span>Dashboard</span>
                       </a>
           </li>
           <li class="sub-menu">
@@ -242,7 +243,8 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="active.php">Active Students</a></li>
+              <li><a class="" href="online.php">Online Applications</a></li>
+             <li><a class="" href="active.php">Active Students</a></li>
               <li><a class="" href="graduate.php">Graduates</a></li>
               <li><a class="" href="display.php">All Students</a></li>
             </ul>
@@ -266,10 +268,9 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="online.php">Online Applications</a></li>
-             <li><a class="" href="active.php">Active Students</a></li>
-              <li><a class="" href="graduate.php">Graduates</a></li>
-              <li><a class="" href="display.php">All Students</a></li>
+              <li><a class="" href="kasaranicampus.php">Embu  Campus</a></li>
+              <li><a class="" href="machakoscampus.php"><span>Nairobi Campus</span></a></li>
+              <li><a class="" href="kituicampus.php"><span>Kutus Campus</span></a></li>
             </ul>
           </li>
 

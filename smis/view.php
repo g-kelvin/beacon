@@ -9,11 +9,12 @@ include "config.php";
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <meta name="description" content="The Beacon Academy Embu - Best Private school for your Kid.">
   <meta name="author" content="GeeksLabs">
-  <meta name="keyword" content="Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) ">
-  <link rel="shortcut icon" href="../assets/img/favicon.png">
-   <title>Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) </title>
+  <meta name="keyword" content="The Beacon Academy Embu - Best Private school for your Kid.">
+  <link rel="shortcut icon" href="../images/favicon.png">
+
+  <title>The Beacon Academy Embu - Best Private school for your Kid. </title>
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
@@ -57,7 +58,7 @@ include "config.php";
       </div>
 
       <!--logo start-->
-     <a href="home.php" class="logo">Nairobi Precision <span class="lite">SMIS</span></a>
+     <a href="home.php" class="logo">The Beacon Academy <span class="lite">SMIS</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
@@ -185,7 +186,7 @@ include "config.php";
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/admin-01.png">
+                                 <img alt="" src="../images/favicon.png" width="50px">
                             </span>
                             <span class="username">Admin</span>
                             <b class="caret"></b>
@@ -266,9 +267,9 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="kasaranicampus.php">Kasarani Campus</a></li>
-              <li><a class="" href="machakoscampus.php"><span>Machakos Campus</span></a></li>
-              <li><a class="" href="kituicampus.php"><span>Kitui Campus</span></a></li>
+              <li><a class="" href="kasaranicampus.php">Embu  Campus</a></li>
+              <li><a class="" href="machakoscampus.php"><span>Nairobi Campus</span></a></li>
+              <li><a class="" href="kituicampus.php"><span>Kutus Campus</span></a></li>
             </ul>
           </li>
 
