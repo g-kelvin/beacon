@@ -2,17 +2,19 @@
 <?php
 include "config.php"; 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <meta name="description" content="The Beacon Academy Embu - Best Private school for your Kid.">
   <meta name="author" content="GeeksLabs">
-  <meta name="keyword" content="Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) ">
-  <link rel="shortcut icon" href="../assets/img/favicon.png">
-   <title>Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) </title>
+  <meta name="keyword" content="The Beacon Academy Embu - Best Private school for your Kid.">
+  <link rel="shortcut icon" href="../images/favicon.png">
+
+  <title>The Beacon Academy Embu - Best Private school for your Kid. </title>
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
@@ -56,14 +58,14 @@ include "config.php";
       </div>
 
       <!--logo start-->
-      <a href="home.php" class="logo">Nairobi Precision <span class="lite">SMIS</span></a>
+      <a href="home.php" class="logo">The Beacon Academy <span class="lite">SMIS</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
         <!--  search form start -->
         <ul class="nav top-menu">
           <li>
-            <form class="navbar-form" action=" search.php" method="POST">
+           <form class="navbar-form" action=" search.php" method="POST">
               <input class="form-control" placeholder="Search" type="text" name="search">
               <button class="btn btn-primary" type="submit" name="submit"> Search</button>
             </form>
@@ -184,7 +186,7 @@ include "config.php";
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/admin-01.png">
+                                <img alt="" src="../images/favicon.png" width="50px">
                             </span>
                             <span class="username">Admin</span>
                             <b class="caret"></b>
@@ -194,9 +196,7 @@ include "config.php";
               <li class="eborder-top">
                 <a href="home.php"><i class="icon_profile"></i> Home</a>
               </li>
-              <li>
-                <a href="messages.php"><i class="icon_mail_alt"></i> My Inbox</a>
-              </li>
+             
               <li>
                 <a href="active.php"><i class="icon_clock_alt"></i> Active Students</a>
               </li>
@@ -244,12 +244,13 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="active.php">Active Students</a></li>
+              <li><a class="" href="online.php">Online Applications</a></li>
+             <li><a class="" href="active.php">Active Students</a></li>
               <li><a class="" href="graduate.php">Graduates</a></li>
               <li><a class="" href="display.php">All Students</a></li>
             </ul>
           </li>
-          
+
           <li>
             <a class="" href="total.php">
                           <i class="icon_piechart"></i>
@@ -258,6 +259,8 @@ include "config.php";
                       </a>
 
           </li>
+          
+          
       
 
           <li class="sub-menu ">
@@ -285,31 +288,32 @@ include "config.php";
         <div class="row">
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa fa-bars"></i> Active <br>
-             <a href="cybercafe.php" type="button" class="btn btn-warning" style="text-transform: capitalize;" >Cyber Cafe Services</a>
-            <a href="computerpackages.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >Computer Packages</a>
-            <a href="graphicsdesign.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >Graphics Design</a>
-            <a href="accountingpackages.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >Accounting Packages </a>
-            <a href="photography&film.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Photography & Film</a>
-            <a href="dJclasses.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >DJ Classes </a>
-            <a href="driving.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Driving Academy</a>
+            <a href="kindergarten.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >Kindergarten</a>
+            <a href="pp1.php" type="button" class="btn btn-warning" style="text-transform: capitalize;" >PP1</a>
+            <a href="pp2.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >PP2</a>
+            <a href="grade1.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >Grade 1 </a>
+            <a href="grade2.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Grade 2</a>
+            <a href="grade3.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >Grade 3 </a>
+            <a href="grade4.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Grade 4</a>
+            <a href="grade5.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Grade 5</a>
+            <a href="grade6.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Grade 6</a>
             <br><br>
 
             <?php 
                           
-                            $feedback="SELECT * from students WHERE status = 'Active' AND Course = 'Cyber Cafe Services' ORDER BY studentid DESC  LIMIT 10 ";
+                            $feedback="SELECT * from students WHERE status = 'Active' AND Course = 'PP1' ORDER BY studentid DESC  LIMIT 10 ";
                             if ($result=mysqli_query($con,$feedback))
                             {
                             // Return the number of rows in result set
                             $rows=mysqli_num_rows($result);
-                            echo "<b style = 'color: green'> Active Cyber Cafe Services Students = ". $rows. " ". "</b>";
+                            echo "<b style = 'color: green'> Active PP1 Students = ". $rows. " ". "</b>";
                             // Free result set
                             mysqli_free_result($result);
                             } ?>
             </h3>            <ol class="breadcrumb">
-
               <li><i class="fa fa-home"></i><a href="home.php">Home</a></li>
               <li><i class="fa fa-bars"></i>Pages</li>
-              <li><i class="fa fa-square-o"></i>Cookery Students</li>
+              <li><i class="fa fa-square-o"></i>PP1 Students</li>
             </ol>
           </div>
         </div>
@@ -319,11 +323,11 @@ include "config.php";
 <table class="table table-striped table-dark">
   <thead>
     <tr>
-      <th scope="col">Admission No</th>
+       <th scope="col">Admission No</th>
       <th scope="col">Name</th>
       <th scope="col">Campus</th>
-      <th scope="col">Course</th>
-      <th scope="col">Course Duration</th>
+      <th scope="col">Grade/Grade</th>
+      <th scope="col">Parent Name</th>
       <th scope="col">Phone No</th>
       <th scope="col">Email</th>
       <th scope="col">Fees Paid</th>
@@ -337,7 +341,7 @@ include "config.php";
 
   <?php
    
-    $feedback="SELECT * from students WHERE status = 'Active' AND Course = 'Cyber Cafe Services' ";
+    $feedback="SELECT * from students WHERE status = 'Active' AND Course = 'PP1' ";
       $rest= mysqli_query($con,$feedback);
       while($rows= mysqli_fetch_assoc($rest)){
          ?> 
@@ -346,7 +350,7 @@ include "config.php";
             <td> <?php echo $rows['fname']." ".$rows['lname'];  ?></td>
             <td> <?php echo $rows['campus'];  ?></td>
             <td> <?php echo $rows['course'];  ?></td>
-            <td> <?php echo $rows['course_duration'];  ?></td>
+              <td> <?php echo $rows['idno'];  ?></td>
             <td> <?php echo $rows['tel'];  ?></td>
             <td> <?php echo $rows['email'];  ?></td>
             <td> <?php echo $rows['fees_paid'];  ?></td>
@@ -354,8 +358,8 @@ include "config.php";
             <td> <a href="update.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-success" ><?php  echo $rows['status']; ?></td> 
               <?php } else { ?>
                <td> <a href="update.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-danger" disabled ><?php  echo $rows['status']; ?></td>  <?php }  ?>
-                <td>  <a href="view.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary" >View</td>
-            <td>  <a href="edit.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary" >Edit</td>
+               <td> <a href="view.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary"  >View</td>
+             <td> <a href="edit.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary"  >Edit</td>
             
 
          </tr> 

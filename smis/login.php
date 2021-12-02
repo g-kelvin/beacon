@@ -9,12 +9,12 @@ include "config.php";
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) ">
+  <meta name="description" content="The Beacon Academy Embu - Best Private school for your Kid.">
   <meta name="author" content="GeeksLabs">
-  <meta name="keyword" content="Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) ">
-  <link rel="shortcut icon" href="../assets/img/favicon.png">
+  <meta name="keyword" content="The Beacon Academy Embu - Best Private school for your Kid.">
+  <link rel="shortcut icon" href="../images/favicon.png">
 
-  <title>Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) </title>
+  <title>The Beacon Academy Embu - Best Private school for your Kid. </title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@ include "config.php";
       <div class="login-wrap">
 
        <center>
-         <img src="../assets/img/smis-01.png" width="150">
+         <img src="../images/logo.png"  width="150">
        </center><br>
 
 

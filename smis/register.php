@@ -6,13 +6,14 @@ include "config.php";
 <html lang="en">
 
 <head>
-   <meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) ">
+  <meta name="description" content="The Beacon Academy Embu - Best Private school for your Kid.">
   <meta name="author" content="GeeksLabs">
-  <meta name="keyword" content="Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy ) ">
-  <link rel="shortcut icon" href="../assets/img/favicon.png">
-  <title>Nairobi Precision Community College - (Cyber cafe services , Computer packages, Graphics design classes , Accounting packages , Photography & Film , DJ Classes, Driving Academy. ) </title>
+  <meta name="keyword" content="The Beacon Academy Embu - Best Private school for your Kid..">
+  <link rel="shortcut icon" href="../images/favicon.png">
+
+  <title>The Beacon Academy Embu - Best Private school for your Kid. </title>
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
@@ -56,7 +57,7 @@ include "config.php";
       </div>
 
       <!--logo start-->
-       <a href="home.php" class="logo">Nairobi Precision <span class="lite">SMIS</span></a>
+        <a href="home.php" class="logo">The Beacon Academy <span class="lite">SMIS</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
@@ -184,7 +185,7 @@ include "config.php";
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/admin-01.png">
+                                 <img alt="" src="../images/favicon.png" width="50px">
                             </span>
                             <span class="username">Admin</span>
                             <b class="caret"></b>
@@ -335,20 +336,23 @@ include "config.php";
             </div>
             <div class="row">
               <div class="col-sm-6 form-group">
-                <label>KCSE Grade</label>
+                <label>Previous Grade</label>
                 <input type="text" name="grade" placeholder="Enter Grade Here.." class="form-control">
               </div>    
               <div class="col-sm-6 form-group">
-                <label>Course</label>
+                <label>Grade / Class</label>
                 <select  name="course"  class="form-control">
                 <option selected>Select a Course</option>
-                <option value="Cyber Cafe Services">Cyber Cafe Services</option>
-                <option value="Computer Packages">Computer Packages</option>
-                <option value="Graphics Design">Graphics Design</option>
-                <option value="Accounting Packages">Accounting Packages</option>
-                <option value="Photography & Film">Photography & Film</option>
-                <option value="DJ Classes">DJ Classes</option>
-                <option value="Driving Academy">Driving Academy</option>
+                <option value="Kindergarten">Kindergarten</option>
+                <option value="PP1">PP1</option>
+                <option value="PP2">PP2</option>
+                <option value="Grade 1">Grade 1</option>
+                <option value="Grade 2">Grade 2</option>
+                <option value="Grade 3">Grade 3</option>
+                <option value="Grade 4">Grade 4</option>
+                <option value="Grade 5">Grade 5</option>
+                <option value="Grade 6">Grade 6</option>
+                
               </select>
               </div>  
             </div> 
@@ -373,12 +377,14 @@ include "config.php";
             <div class="row">
 
                 <div class="col-sm-6 form-group">
-                <label>Course Duration</label>
+                <label>Pupil Talent</label>
                 <select name="course_duration"  class="form-control">
-                <option selected>Select Course Duration</option>
-                <option value="6 Months">6 months</option>
-                <option value="1 Year">1 Year</option>
-                <option value="2 Years">2 Years</option>
+                <option selected>Select Talent</option>
+                <option value="Signing">Signing</option>
+                <option value="Football">Football</option>
+                <option value="Dancing">Dancing</option>
+                <option value="Other">Others</option>
+
               </select>
               </div> 
    
@@ -386,9 +392,9 @@ include "config.php";
                 <label>Campus</label>
                 <select  name="campus" class="form-control">
                 <option selected>Select Campus</option>
+                <option value="Embu">Embu</option>
                 <option value="Nairobi">Nairobi</option>
-                <option value="Machakos">Machakos</option>
-                <option value="Kiui">Kitui</option>
+                <option value="Kutus">Kutus</option>
               </select>
               </div>  
             </div>  
@@ -396,7 +402,7 @@ include "config.php";
 
              <div class="row">
               <div class="col-sm-6 form-group">
-                <label>ID No.</label>
+                <label> Parent Name.</label>
                 <input type="text" name="idno" placeholder="Enter ID Here.." class="form-control">
               </div>    
               <div class="col-sm-6 form-group">
@@ -427,7 +433,7 @@ include "config.php";
               </div>  
             </div>        
           <div class="form-group">
-            <label>Active Phone Number</label>
+            <label> Parent Active Phone Number</label>
             <input type="text" name="tel" placeholder="Enter Phone Number Here.." class="form-control">
           </div>    
           <div class="form-group">
@@ -435,20 +441,11 @@ include "config.php";
             <input type="text" name="email" placeholder="Enter Email Address Here.." class="form-control">
           </div>  
           <div class="form-group">
-            <label>Admission No.</label>
-            <input type="text" name="adminno" placeholder="Enter Admission No. Here.. (Must be Unique)" class="form-control" required>
+            <label>Fees Paid.</label>
+            <input  type="number" name="fees_paid" class="form-control" placeholder="1000.00" >
           </div>
 
-          <div class="row">
-              <div class="col-sm-6 form-group">
-                <label>Fees Paid</label>
-               <input  type="number" name="fees_paid" class="form-control" placeholder="1000.00">
-              </div>   
-             <div class="col-sm-6 form-group">
-                <label>Admitted By:</label>
-               <input  type="text" name="admitted_by" class="form-control" placeholder="Mr.kelvin">
-              </div> 
-            </div> 
+          
 
              <div class="form-group">
               <label>Additional Information</label>
