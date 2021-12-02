@@ -87,7 +87,7 @@
                        <li><a href="services.html">curriculum</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog.html">Fees</a></li>
+                        <li><a href="fees.html">Fees</a></li>
                         <li><a href="contact.html">Contact</a></li>
                          <li class="dropdown submenu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register</a>
@@ -97,7 +97,7 @@
                                 
                             </ul>
                         </li>
-                        <li><a href="blog.html"><b style="color: red"> Mails </b></a></li>
+                       <li><a href="https://thebeaconacademy.sc.ke:2096/"><b style="color: red"> Mails </b></a></li>
                         
                     </ul>
                 </div><!-- /.navbar-collapse -->
