@@ -343,8 +343,32 @@ include "config.php";
     $fees = $row['fees'];
     $mpesa = $row['mpesa'];
     $additional= $row['additional'];
-     $adminno= $row['adminno'];
-      $admitted_by= $row['admitted_by'];
+    $adminno= $row['adminno'];
+    $admitted_by= $row['admitted_by'];
+
+    $mfname = $row['mfname'];
+    $msname = $row['msname'];
+    $mlname = $row['mlname'];
+    $mactive1 = $row['mactive1'];
+    $mactive2 = $row['mactive2'];
+    $mactive3 = $row['mactive3'];
+    $memail1 = $row['memail1'];
+    $memail2 = $row['memail2'];
+    $midno = $row['midno'];
+    $moccupation = $row['moccupation'];
+    $moffice = $row['moffice'];
+
+    $gfname = $row['gfname'];
+    $gsname = $row['gsname'];
+    $glname = $row['glname'];
+    $gactive1 = $row['gactive1'];
+    $gactive2 = $row['gactive2'];
+    $gactive3 = $row['gactive3'];
+    $gemail1 = $row['gemail1'];
+    $gemail2 = $row['gemail2'];
+    $gidno = $row['gidno'];
+    $goccupation = $row['goccupation'];
+    $goffice = $row['goffice'];
        
          }
 
@@ -395,7 +419,7 @@ include "config.php";
             <B> ABOUT PUPIL </B> <br> <hr>
             <b style="color: blue">Former School:</b> <?php echo $fschool ?> <br>
             <b style="color: blue">Birth Certificate No:</b> <?php echo $cert ?><br>
-            <b style="color: blue">Nemis No:</b> <?php echo $nemis ?><br>
+            <b style="color: blue">Nemis - upi No:</b> <?php echo $nemis ?><br>
             <b style="color: blue">Residence:</b> <?php echo $residence ?><br>
             <b style="color: blue">Assessment:</b> <?php echo $assessment ?><br>
             <b style="color: blue">Any Disability:</b> <?php echo $disability ?><br>
@@ -404,17 +428,24 @@ include "config.php";
           <div class="col-6 col-md-4">
             <B> PARENT INFORMATION </B> <br> <hr>
           <b style="color: blue">Parents Name:</b> <?php echo $fname ." ". $lname;  ?> <br>
-            <b style="color: blue">Occupation:</b> <?php echo $occupation ?><br>
+            <b style="color: blue">Father Occupation:</b> <?php echo $occupation ?><br>
             <b style="color: blue">ID Number:</b> <?php echo $idno ?><br>
             <b style="color: blue">Residence:</b> <?php echo $residence ?><br>
-              <b style="color: blue">Office Line:</b> <?php echo $office ?><br>
+              <b style="color: blue">Father Office Line:</b> <?php echo $office ?><br>
+              <b style="color: blue">Mother Office Line:</b> <?php echo $moffice ?><br>
+              <b style="color: blue">Guardian Office Line:</b> <?php echo $goffice ?><br>
 
           </div>
           <div class="col-6 col-md-4">
              <B> SECONDARY CONTACTS </B> <br> <hr>
-             <b style="color: blue">Active Sim 2:</b> <?php echo $active2 ?><br>
-             <b style="color: blue">Active Sim 3:</b> <?php echo $active3 ?><br>
-             <b style="color: blue">Email 2:</b> <?php echo $email2 ?><br>
+             <b style="color: blue">Mother Occupation:</b> <?php echo $moccupation ?><br>
+             <b style="color: blue">Gaurdian Occupation:</b> <?php echo $goccupation ?><br>
+             <b style="color: blue">Father Active Tel :</b> <?php echo $active2 ." | ". $active3   ?><br>
+             <b style="color: blue">Mother Active Tel :</b> <?php echo $mactive1 ." | ". $mactive2 ." | ".  $mactive2  ?><br>
+             <b style="color: blue">Gaurdian Active Tel :</b> <?php echo $gactive1 ." | ". $gactive2 ." | ".  $gactive2  ?><br>
+             <b style="color: blue">Father Email :</b> <?php echo $email1 ." | ". $email2 ?><br>
+             <b style="color: blue">Mother Email :</b> <?php echo $memail1 ." | ". $memail2 ?><br>
+             <b style="color: blue">Gaurdian Email :</b> <?php echo $gemail1 ." | ". $gemail2 ?><br>
     
           </div>
         </div>

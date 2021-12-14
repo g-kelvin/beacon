@@ -59,14 +59,15 @@ $pdf->Ln(16,0);
 $pdf->Cell(65,8, "Below is the Parent Details:  ",0,0,'L');
 $pdf->Ln(8,100);
 
-$pdf->Cell(6,10,"Parent Name: {$rows['pfname']} {$rows['plname']}  ",0,1,'L');
+$pdf->Cell(6,10," Name: {$rows['pfname']} {$rows['plname']} |  {$rows['mfname']} {$rows['mlname']} | {$rows['gfname']} {$rows['glname']} ",0,1,'L');
 
-$pdf->Cell(6,2,'Occupation:  '."{$rows['occupation']}",0,1,'L');
+$pdf->Cell(6,2,'Occupation:  '."{$rows['occupation']} | {$rows['moccupation']} | {$rows['goccupation']}",0,1,'L');
 
-$pdf->Cell(6,8,"ID No:             {$rows['idno']} ",0,1,'L');
-$pdf->Cell(6,8,"Tel No:            {$rows['active1']} | {$rows['active2']} | {$rows['active3']} ",0,1,'L');
-$pdf->Cell(6,8,"Email:            {$rows['email1']} | {$rows['email2']}  ",0,1,'L');
-$pdf->Ln(16,0);
+$pdf->Cell(6,8," ID No:             {$rows['idno']} | {$rows['midno']} | {$rows['gidno']} ",0,1,'L');
+$pdf->Cell(6,8," Tel No:            {$rows['active1']} | {$rows['mactive1']} | {$rows['gactive1']} ",0,1,'L');
+$pdf->Cell(6,8," Email:            {$rows['email1']} | {$rows['memail1']} | {$rows['gemail1']}   ",0,1,'L');
+$pdf->Ln(8,0);
+
 $pdf->Cell(60,10,'',0);
 $pdf->Cell(62,10,'OUR VISION',0,1,'C');
 $pdf->Cell(60,5,'',0);
@@ -82,6 +83,10 @@ $pdf->Cell(62,2,'Is to raise a generation of Highly effective Humanitarian not j
 $pdf->Cell(60,10,'',0);
 
 $pdf->Cell(62,8,'but Great Men And Women in the region and beyond.',0,1,'C');
+$pdf->Ln(8,0);
+
+$pdf->Cell(6,8,"NB: Payments referred to herein shall not be refundable under any circumstances, including but not limited ",0,1,'L');
+$pdf->Cell(6,8,"to the termination of this Agreement for whatever reason. ",0,1,'L');
 
 
 $pdf->Cell(6,8,"Parent | Guardian Signature:............................................. ",0,1,'L');
