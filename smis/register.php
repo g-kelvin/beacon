@@ -266,9 +266,9 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="kasaranicampus.php">Kasarani Campus</a></li>
-              <li><a class="" href="machakoscampus.php"><span>Machakos Campus</span></a></li>
-              <li><a class="" href="kituicampus.php"><span>Kitui Campus</span></a></li>
+              <li><a class="" href="embu.php">Embu Campus</a></li>
+              <li><a class="" href="Embu.php"><span>Embu Campus</span></a></li>
+              <li><a class="" href="kutus.php"><span>Kutus Campus</span></a></li>
             </ul>
           </li>
 
@@ -304,18 +304,40 @@ include "config.php";
     <h1 class="well">School Registration Form</h1>
   <div class="col-lg-12 well">
   <div class="row">
+    <center> <h3 class="well" style="color: orange">Students Details</h3></center>
         <form action="data.php" method="POST">
           <div class="col-sm-12">
-            <div class="row">
-              <div class="col-sm-6 form-group">
+              <div class="row">
+              <div class="col-sm-4 form-group">
                 <label>First Name</label>
-                <input type="text" name="fname" placeholder="Enter First Name Here.." class="form-control">
-              </div>
-              <div class="col-sm-6 form-group">
+                <input type="text"  placeholder="Enter First Name Here.." name="fname" class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Second Name</label>
+                <input type="text" name="sname" placeholder="Enter Second Name Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
                 <label>Last Name</label>
                 <input type="text" name="lname" placeholder="Enter Last Name Here.." class="form-control">
-              </div>
-            </div>          
+              </div>    
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Former School</label>
+                <input type="text"  placeholder="Enter Former School Here.." name="fschool" class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Nemis upi No.</label>
+                <input type="text" name="nemis" placeholder="Enter Nemis upi No. Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Birth Certificate Entry No.</label>
+                <input type="text" name="cert" placeholder="Enter Birth Certificate Entry No. Here.." class="form-control">
+              </div>    
+            </div>
+        
+        
             <div class="form-group">
               <label>Address</label>
               <textarea placeholder="Enter Address Here.." name="address" rows="3" class="form-control"></textarea>
@@ -334,6 +356,24 @@ include "config.php";
                 <input type="text" name="postal" placeholder="Enter Postal Code Here.." class="form-control">
               </div>    
             </div>
+              <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Place of Residence</label>
+                <input type="text" name="residence" placeholder="Enter First Name Here.." class="form-control">
+              </div>
+               <div class="col-sm-6 form-group">
+                <label>Any Disability</label>
+                <select  name="disability"  class="form-control">
+                <option selected>-- Select --</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+              </div>  
+            </div>
+            <div class="form-group">
+              <label>If any Disability Specify Below</label>
+              <textarea placeholder="Enter Disability Here.." name="specify" rows="3" class="form-control"></textarea>
+            </div>    
             <div class="row">
               <div class="col-sm-6 form-group">
                 <label>Previous Grade</label>
@@ -341,7 +381,7 @@ include "config.php";
               </div>    
               <div class="col-sm-6 form-group">
                 <label>Grade / Class</label>
-                <select  name="course"  class="form-control">
+                <select  name="class"  class="form-control">
                 <option selected>Select a Course</option>
                 <option value="Kindergarten">Kindergarten</option>
                 <option value="PP1">PP1</option>
@@ -352,6 +392,8 @@ include "config.php";
                 <option value="Grade 4">Grade 4</option>
                 <option value="Grade 5">Grade 5</option>
                 <option value="Grade 6">Grade 6</option>
+                <option value="Class 7">Class 7</option>
+                <option value="Class 8">Class 8</option>
                 
               </select>
               </div>  
@@ -378,7 +420,7 @@ include "config.php";
 
                 <div class="col-sm-6 form-group">
                 <label>Pupil Talent</label>
-                <select name="course_duration"  class="form-control">
+                <select name="talent"  class="form-control">
                 <option selected>Select Talent</option>
                 <option value="Signing">Signing</option>
                 <option value="Football">Football</option>
@@ -402,8 +444,8 @@ include "config.php";
 
              <div class="row">
               <div class="col-sm-6 form-group">
-                <label> Parent Name.</label>
-                <input type="text" name="idno" placeholder="Enter ID Here.." class="form-control">
+                <label> Assessment No.</label>
+                <input type="text" name="assessment" placeholder="Enter Assessment No. Here.." class="form-control">
               </div>    
               <div class="col-sm-6 form-group">
                 <label>Fees Paid By:</label>
@@ -431,19 +473,216 @@ include "config.php";
                 <option value="Female">Female</option>
               </select>
               </div>  
-            </div>        
-          <div class="form-group">
-            <label> Parent Active Phone Number</label>
-            <input type="text" name="tel" placeholder="Enter Phone Number Here.." class="form-control">
-          </div>    
-          <div class="form-group">
-            <label>Active Email Address</label>
-            <input type="text" name="email" placeholder="Enter Email Address Here.." class="form-control">
-          </div>  
-          <div class="form-group">
-            <label>Fees Paid.</label>
-            <input  type="number" name="fees_paid" class="form-control" placeholder="1000.00" >
+            </div>
+            <center> <h3 class="well" style="color: orange">Father Details</h3></center>
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>First Name</label>
+                <input type="text"  placeholder="Enter First Name Here.." name="pfname" class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Second Name</label>
+                <input type="text" name="psname" placeholder="Enter Second Name Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Last Name</label>
+                <input type="text" name="plname" placeholder="Enter Last Name Here.." class="form-control">
+              </div>    
+            </div>
+
+            
+
+
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Active Number 1</label>
+                <input type="text"  placeholder="Enter Active Number 1 Here.." name="active1" class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Active Number 2</label>
+                <input type="text" name="active2" placeholder="Enter Active Number 2 Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Active Number 3</label>
+                <input type="text" name="active3" placeholder="Enter Active Number 3 Here.." class="form-control">
+              </div>    
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Active Email 1</label>
+                <input type="text" name="email1" placeholder="Enter Email 1 Here.." class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Active Email 2</label>
+                <input type="text" name="email2" placeholder="Enter Email 2 Here.." class="form-control">
+              </div> 
+            </div>
+
+             <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>ID Number</label>
+                <input type="text"  placeholder="Enter ID Number Here.." name="idno" class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Occupation</label>
+                <input type="text" name="occupation" placeholder="Enter Occupation Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Office Line</label>
+                <input type="text" name="office" placeholder="Enter Office Line Here.." class="form-control">
+              </div>    
+            </div>
+
+            <center> <h3 class="well" style="color: orange">Mother Details</h3></center>
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>First Name</label>
+                <input type="text"  placeholder="Enter First Name Here.." name="mfname" class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Second Name</label>
+                <input type="text" name="msname" placeholder="Enter Second Name Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Last Name</label>
+                <input type="text" name="mlname" placeholder="Enter Last Name Here.." class="form-control">
+              </div>    
+            </div>
+
+            
+
+
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Active Number 1</label>
+                <input type="text"  placeholder="Enter Active Number 1 Here.." name="mactive1" class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Active Number 2</label>
+                <input type="text" name="mactive2" placeholder="Enter Active Number 2 Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Active Number 3</label>
+                <input type="text" name="mactive3" placeholder="Enter Active Number 3 Here.." class="form-control">
+              </div>    
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Active Email 1</label>
+                <input type="text" name="memail1" placeholder="Enter Email 1 Here.." class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Active Email 2</label>
+                <input type="text" name="memail2" placeholder="Enter Email 2 Here.." class="form-control">
+              </div> 
+            </div>
+
+             <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>ID Number</label>
+                <input type="text"  placeholder="Enter ID Number Here.." name="midno" class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Occupation</label>
+                <input type="text" name="moccupation" placeholder="Enter Occupation Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Office Line</label>
+                <input type="text" name="moffice" placeholder="Enter Office Line Here.." class="form-control">
+              </div>    
+            </div>
+
+            <center> <h3 class="well" style="color: orange"> Guardian Details</h3></center>
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>First Name</label>
+                <input type="text"  placeholder="Enter First Name Here.." name="gfname" class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Second Name</label>
+                <input type="text" name="gsname" placeholder="Enter Second Name Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Last Name</label>
+                <input type="text" name="glname" placeholder="Enter Last Name Here.." class="form-control">
+              </div>    
+            </div>
+
+            
+
+
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Active Number 1</label>
+                <input type="text"  placeholder="Enter Active Number 1 Here.." name="gactive1" class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Active Number 2</label>
+                <input type="text" name="gactive2" placeholder="Enter Active Number 2 Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Active Number 3</label>
+                <input type="text" name="gactive3" placeholder="Enter Active Number 3 Here.." class="form-control">
+              </div>    
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Active Email 1</label>
+                <input type="text" name="gemail1" placeholder="Enter Email 1 Here.." class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Active Email 2</label>
+                <input type="text" name="gemail2" placeholder="Enter Email 2 Here.." class="form-control">
+              </div> 
+            </div>
+
+             <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>ID Number</label>
+                <input type="text"  placeholder="Enter ID Number Here.." name="gidno" class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Occupation</label>
+                <input type="text" name="goccupation" placeholder="Enter Occupation Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Office Line</label>
+                <input type="text" name="goffice" placeholder="Enter Office Line Here.." class="form-control">
+              </div>    
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Fees Paid</label>
+                <input type="text" name="fees" placeholder="Enter Fees Paid e.g 1000.00" class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Confirmation Message</label>
+                <input type="text" name="mpesa" placeholder="Paste Empesa Message Here.." class="form-control">
+              </div> 
+            </div>
+
+        
+
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Fees Paid</label>
+                <input type="text" name="fees" placeholder="Enter Fees Paid e.g 1000.00" class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Confirmation Message</label>
+                <input type="text" name="mpesa" placeholder="Paste Empesa Message Here.." class="form-control">
+              </div> 
+            </div>
+
+                  <div class="form-group">
+            <label>Admitted By</label>
+            <input type="text" name="admitted_by"  placeholder="E.g Tr. Dan" class="form-control">
           </div>
+
 
           
 

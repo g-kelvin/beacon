@@ -267,9 +267,9 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="kasaranicampus.php">Kasarani Campus</a></li>
-              <li><a class="" href="machakoscampus.php"><span>Machakos Campus</span></a></li>
-              <li><a class="" href="kituicampus.php"><span>Kitui Campus</span></a></li>
+              <li><a class="" href="embu.php">Embu Campus</a></li>
+              <li><a class="" href="nairobi.php"><span>Nairobi Campus</span></a></li>
+              <li><a class="" href="kutus.php"><span>Kutus Campus</span></a></li>
             </ul>
           </li>
 
@@ -290,7 +290,7 @@ include "config.php";
 
           <?php 
                           
-                            $feedback="SELECT * from students WHERE campus = 'Machakos' AND status = 'active'  ";
+                            $feedback="SELECT * from students WHERE campus = 'Nairobi' AND status = 'active'  ";
                             if ($result=mysqli_query($con,$feedback))
                             {
                             // Return the number of rows in result set
@@ -304,7 +304,7 @@ include "config.php";
 
 
 
-                            $feedback="SELECT * from students WHERE campus = 'Machakos' AND status = 'graduated'  ";
+                            $feedback="SELECT * from students WHERE campus = 'Nairobi' AND status = 'graduated'  ";
                             if ($result=mysqli_query($con,$feedback))
                             {
                             // Return the number of rows in result set
@@ -320,7 +320,7 @@ include "config.php";
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="home.php">Home</a></li>
               <li><i class="fa fa-bars"></i>Pages</li>
-              <li><i class="fa fa-square-o"></i>Machakos Campus</li>
+              <li><i class="fa fa-square-o"></i>Nairobi Campus</li>
             </ol>
           </div>
         </div>
@@ -348,7 +348,7 @@ include "config.php";
 
   <?php
    
-    $feedback="SELECT * from students WHERE campus = 'Machakos' ORDER BY studentid DESC  LIMIT 10 ";
+    $feedback="SELECT * from students WHERE campus = 'Nairobi' ORDER BY studentid DESC  LIMIT 10 ";
       $rest= mysqli_query($con,$feedback);
       while($rows= mysqli_fetch_assoc($rest)){
          ?> 
@@ -407,15 +407,15 @@ include "config.php";
                 <label>Message To:</label>
                 <select name=" message_to"  class="form-control" required>
                 <option >Select Campus</option>
-                <option value="Nairobi">Nairobi</option>
-                <option value="Kitui">Kitui</option>
+                <option value="Embu">Embu</option>
+                <option value="Kutus">Kutus</option>
               </select>
               </div>
                <div class="col-sm-6 form-group">
                 <label>Message From:</label>
                 <select name=" message_from"  class="form-control" required>
                 <option >--Select--</option>
-                <option value="Machakos">Machakos</option>
+                <option value="Nairobi">Nairobi</option>
                 
               </select>
               </div>  
@@ -476,7 +476,7 @@ include "config.php";
                                      $user = $rows['user_name'];
                                      $message_from = $rows['message_from'];
                                      $message_from = $rows['message_to'];
-                               $qrt='SELECT * from users WHERE message_to ="Machakos"    and status = "Unread" ORDER BY id DESC  LIMIT 3';
+                               $qrt='SELECT * from users WHERE message_to ="Nairobi"    and status = "Unread" ORDER BY id DESC  LIMIT 3';
                                     $result= mysqli_query($con,$qrt);
                                     while($row= mysqli_fetch_assoc($result)){ ?>
 
@@ -521,7 +521,7 @@ include "config.php";
                                      $user = $rows['user_name'];
                                      $message_from = $rows['message_from'];
                                       $message_from = $rows['message_to'];
-                               $qrt='SELECT * from users WHERE message_to ="Machakos"   and status = "read" ORDER BY id DESC  LIMIT 3';
+                               $qrt='SELECT * from users WHERE message_to ="Nairobi"   and status = "read" ORDER BY id DESC  LIMIT 3';
                                     $result= mysqli_query($con,$qrt);
                                     while($row= mysqli_fetch_assoc($result)){ ?>
 

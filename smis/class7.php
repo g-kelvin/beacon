@@ -2,10 +2,8 @@
 <?php
 include "config.php"; 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 
 <head>
   <meta charset="utf-8">
@@ -114,10 +112,7 @@ include "config.php";
           <li id="mail_notificatoin_bar" class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <i class="icon-envelope-l"></i>
-                            <span class="badge bg-important">
-
-
-                              <?php 
+                            <span class="badge bg-important"> <?php 
                           
                             $feedback="SELECT * from users WHERE status = 'unread' ";
                             if ($result=mysqli_query($con,$feedback))
@@ -190,7 +185,7 @@ include "config.php";
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="../images/favicon.png" width="50px">
+                                 <img alt="" src="../images/favicon.png" width="50px">
                             </span>
                             <span class="username">Admin</span>
                             <b class="caret"></b>
@@ -199,6 +194,9 @@ include "config.php";
               <div class="log-arrow-up"></div>
               <li class="eborder-top">
                 <a href="home.php"><i class="icon_profile"></i> Home</a>
+              </li>
+              <li>
+                <a href="messages.php"><i class="icon_mail_alt"></i> My Inbox</a>
               </li>
               <li>
                 <a href="active.php"><i class="icon_clock_alt"></i> Active Students</a>
@@ -236,7 +234,7 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="register.php">Register Students</a></li>
+              <li><a class="" href="register.php">Register Student</a></li>
               <!-- <li><a class="" href="form_validation.html">Form Validation</a></li> -->
             </ul>
           </li>
@@ -247,8 +245,7 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-             <li><a class="" href="online.php">Online Applications</a></li>
-             <li><a class="" href="active.php">Active Students</a></li>
+              <li><a class="" href="active.php">Active Students</a></li>
               <li><a class="" href="graduate.php">Graduates</a></li>
               <li><a class="" href="display.php">All Students</a></li>
             </ul>
@@ -271,9 +268,9 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-             <li><a class="" href="kasaranicampus.php">Embu  Campus</a></li>
-              <li><a class="" href="machakoscampus.php"><span>Nairobi Campus</span></a></li>
-              <li><a class="" href="kituicampus.php"><span>Kutus Campus</span></a></li>
+              <li><a class="" href="embu.php">Embu Campus</a></li>
+              <li><a class="" href="Embu.php"><span>Embu Campus</span></a></li>
+              <li><a class="" href="kutus.php"><span>Kutus Campus</span></a></li>
             </ul>
           </li>
 
@@ -288,42 +285,36 @@ include "config.php";
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa fa-bars"></i>
-            <a href="active.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >Active Students</a>
-            <a href="graduate.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >Graduated Students</a>
+            <h3 class="page-header"><i class="fa fa fa-bars"></i> Active <br>
+            <a href="kindergarten.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >Kindergarten</a>
+            <a href="pp1.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >PP1</a>
+            <a href="pp2.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >PP2</a>
+            <a href="grade1.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >Grade 1 </a>
+            <a href="grade2.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Grade 2</a>
+            <a href="grade3.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" >Grade 3 </a>
+            <a href="grade4.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Grade 4</a>
+            <a href="grade5.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Grade 5</a>
+            <a href="grade6.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Grade 6</a>
+            <a href="class7.php" type="button" class="btn btn-warning" style="text-transform: capitalize;" > Class 7</a>
+            <a href="class8.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Class 8</a>
+            <br><br>
+
             <?php 
                           
-                            $feedback="SELECT * from students WHERE campus = 'Embu' AND status = 'active' ORDER BY studentid DESC  LIMIT 10 ";
+                            $feedback="SELECT * from students WHERE status = 'Active' AND class = 'Class 7' ORDER BY studentid DESC  LIMIT 10 ";
                             if ($result=mysqli_query($con,$feedback))
                             {
                             // Return the number of rows in result set
                             $rows=mysqli_num_rows($result);
-                            echo "<b style = 'color: green'> Active Students are = ". $rows. " ". "</b>";
+                            echo "<b style = 'color: green'>Active Class 7 Students = ". $rows. " ". "</b>";
                             // Free result set
                             mysqli_free_result($result);
-                            }
+                            } ?>
+            </h3>            <ol class="breadcrumb">
 
-
-
-
-
-                            $feedback="SELECT * from students WHERE campus = 'Embu' AND status = 'Graduated' ";
-                            if ($result=mysqli_query($con,$feedback))
-                            {
-                            // Return the number of rows in result set
-                            $rows=mysqli_num_rows($result);
-                            echo "<b style = 'color: red'> Graduates are = ". $rows. "</b>";
-                            // Free result set
-                            mysqli_free_result($result);
-                            }
-
-
-                            ?>
-            </h3>
-            <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="home.php">Home</a></li>
               <li><i class="fa fa-bars"></i>Pages</li>
-              <li><i class="fa fa-square-o"></i>Embu Campus</li>
+              <li><i class="fa fa-square-o"></i>Class 7  Students</li>
             </ol>
           </div>
         </div>
@@ -333,22 +324,26 @@ include "config.php";
 <table class="table table-striped table-dark">
   <thead>
     <tr>
-      <th scope="col">Admission No</th>
+     <th scope="col">Admission No</th>
       <th scope="col">Name</th>
       <th scope="col">Campus</th>
-      <th scope="col">Course</th>
-      <th scope="col">Course Duration</th>
+      <th scope="col">Grade/Grade</th>
+      <th scope="col">Parent Name</th>
       <th scope="col">Phone No</th>
       <th scope="col">Email</th>
       <th scope="col">Fees Paid</th>
       <th scope="col">Status</th>
       <th scope="col">View</th>
       <th scope="col">Edit</th>
+      <th scope="col">Print</th>
+
     </tr>
   </thead>
+
+
   <?php
    
-    $feedback="SELECT * from students WHERE campus = 'Embu' ORDER BY studentid DESC  LIMIT 10 ";
+    $feedback="SELECT * from students WHERE status = 'Active' AND class = 'Class 7' ";
       $rest= mysqli_query($con,$feedback);
       while($rows= mysqli_fetch_assoc($rest)){
          ?> 
@@ -356,18 +351,18 @@ include "config.php";
             <td> <?php echo $rows['adminno'];  ?></td>
             <td> <?php echo $rows['fname']." ".$rows['lname'];  ?></td>
             <td> <?php echo $rows['campus'];  ?></td>
-            <td> <?php echo $rows['course'];  ?></td>
-            <td> <?php echo $rows['course_duration'];  ?></td>
-            <td> <?php echo $rows['tel'];  ?></td>
-            <td> <?php echo $rows['email'];  ?></td>
-            <td> <?php echo $rows['fees_paid'];  ?></td>
+            <td> <?php echo $rows['class'];  ?></td>
+              <td> <?php echo $rows['pfname']." ".$rows['plname'];  ?></td>
+            <td> <?php echo $rows['active1'];  ?></td>
+            <td> <?php echo $rows['email1'];  ?></td>
+            <td> <?php echo $rows['fees'];  ?></td>
             <?php if( $rows['status']== 'Active')  { ?>
             <td> <a href="update.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-success" ><?php  echo $rows['status']; ?></td> 
               <?php } else { ?>
                <td> <a href="update.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-danger" disabled ><?php  echo $rows['status']; ?></td>  <?php }  ?>
-            <td> <a href="view.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary"  >View</td>
-             <td> <a href="edit.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary"  >Edit</td>
-            
+                <td>  <a href="view.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary" >View</td>
+            <td>  <a href="edit.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary" >Edit</td>
+              <td>  <a href="tbaletter.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary" >Print</td>
 
          </tr> 
 
@@ -396,169 +391,10 @@ include "config.php";
 </table>
 
 
-<div class="row">
-        <hr>
-        <center> <h3 style="color: blue">Campus Chat</h3> </center> 
-
-  <div class="col-sm-5">
-
-
- <form action="" method="post">
-    <div class="col-sm-6 form-group">
-                <label>Message To:</label>
-                <select name=" message_to"  class="form-control" required>
-                <option >Select Campus</option>
-                <option value="Machakos">Machakos</option>
-                <option value="Kitui">Kitui</option>
-              </select>
-              </div>
-               <div class="col-sm-6 form-group">
-                <label>Message From:</label>
-                <select name=" message_from"  class="form-control" required>
-                <option >--Select--</option>
-                <option value="Nairobi">Nairobi</option>
-                
-              </select>
-              </div>  
-       <textarea class="form-control" name="message" rows="3" placeholder="Write Your Message..."required></textarea>
-       <input type="submit" name="feedback" value="Submit" class="btn btn-primary">
-    </form> 
-    
-
-  </div>
-  <div class="col-sm-7">
-
-
-    <?php
-                                  if(isset($_POST['feedback'])){
-                                 
-                                  $message= $_POST['message']; 
-                                  $message_from = $_POST['message_from']; 
-                                  $message_to = $_POST['message_to'];
-                                  $feedback="SELECT * from users ";
-                                  $rest= mysqli_query($con,$feedback);
-                                  if($rows= mysqli_fetch_assoc($rest)){
-                               
-                                $qry=mysqli_query( $con," INSERT INTO `users` ( `message`, `user_name`, `pass`, `status`, `message_from`, `message_to`) VALUES ('$message', '".$rows['user_name']."', '".$rows['pass']."', 'Unread', '$message_from','$message_to')" );
-                                  if ($qry){
-                                    echo "Your Message was Successfully Submitted";
-                                   
-                                  } else{
-                                    echo "Mistake";
-                                  }
-                                    
-                                    }   
-                                                   
-                                    }                      
-
-
-                                     ?>  
-
-
-                                     <hr>
-
-                                     <table class="table table-striped table-dark">
-                                              <thead>
-                                                <tr>
-                                                  <th scope="col">To</th>
-                                                  <th scope="col">Time</th>
-                                                  <th scope="col">From</th>
-                                                  <th scope="col">Message</th>
-                                                  <th scope="col">Status</th>
-                                                  <th scope="col">Click to Read</th>
-                                                </tr>
-                                       </thead>
-                                      <?php
-
-                                  $feedback="SELECT * from users WHERE status ='unread' ";
-                                  $rest= mysqli_query($con,$feedback);
-                                  if($rows= mysqli_fetch_assoc($rest)){
-                                    $password = $rows['pass'];
-                                     $user = $rows['user_name'];
-                                     $message_from = $rows['message_from'];
-                                     $message_from = $rows['message_to'];
-                               $qrt='SELECT * from users WHERE message_to ="Nairobi"    and status = "Unread" ORDER BY id DESC  LIMIT 3';
-                                    $result= mysqli_query($con,$qrt);
-                                    while($row= mysqli_fetch_assoc($result)){ ?>
-
-                                        <tr>
-            <td> <?php echo $row['message_to'];  ?></td>
-            <td> <?php echo $row['created_at'];  ?></td>
-            <td> <?php echo $row['message_from'];  ?></td>
-            <td> <?php echo $row['message'];  ?></td>
-            <td> <button class="btn btn-success" >  <?php echo $row['status'];  ?></button></td>
-             <td> <a href="edity.php?GetID=<?php echo $row['id']  ?>" class="btn btn-primary"  >Edit </td>
-            
-
-         </tr> 
-
-                                     <?php
-
-                                    }
-                                  }
-                                 
 
 
 
-                               ?>  
-
-</table>
-
-
-
-   <table class="table table-striped table-dark">
-                                              <thead>
-                                                <tr>
-                                                  <th scope="col">To</th>
-                                                  <th scope="col">Time</th>
-                                                  <th scope="col">From</th>
-                                                  <th scope="col">Message</th>
-                                                  <th scope="col">Status</th>
-                                                  <th scope="col">Click to Read</th>
-                                                </tr>
-                                       </thead>
-                               
-                                <?php
-
-                                
-                                    $password = $rows['pass'];
-                                     $user = $rows['user_name'];
-                                     $message_from = $rows['message_from'];
-                                      $message_from = $rows['message_to'];
-                               $qrt='SELECT * from users WHERE message_to ="Nairobi"   and status = "read" ORDER BY id DESC  LIMIT 3';
-                                    $result= mysqli_query($con,$qrt);
-                                    while($row= mysqli_fetch_assoc($result)){ ?>
-
-                                        <tr>
-            <td> <?php echo $row['message_to'];  ?></td>
-            <td> <?php echo $row['created_at'];  ?></td>
-            <td> <?php echo $row['message_from'];  ?></td>
-            <td> <?php echo $row['message'];  ?></td>
-            <td> <button class="btn btn-success" >  <?php echo $row['status'];  ?></button></td>
-             <td> <a href="edity.php?GetID=<?php echo $row['id']  ?>" class="btn btn-primary" disabled >Edit</td>
-            
-
-         </tr> 
-
-                                     <?php
-
-                                    }
-                                  
-
-
-
-                               ?>  
-    
-
-
-</table>
-
-  </div>
-</div>
       </section>
-
-      
-<a href=""></a>
     </section>
     <!--main content end-->
    
@@ -580,4 +416,3 @@ include "config.php";
 </body>
 
 </html>
- -->

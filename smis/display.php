@@ -185,7 +185,7 @@ include "config.php";
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/admin-01.png">
+                                <img alt="" src="img/admin-01.png" width="50px">
                             </span>
                             <span class="username">Admin</span>
                             <b class="caret"></b>
@@ -268,9 +268,9 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="kasaranicampus.php">Embu  Campus</a></li>
-              <li><a class="" href="machakoscampus.php"><span>Nairobi Campus</span></a></li>
-              <li><a class="" href="kituicampus.php"><span>Kutus Campus</span></a></li>
+              <li><a class="" href="embu.php">Embu Campus</a></li>
+              <li><a class="" href="Embu.php"><span>Embu Campus</span></a></li>
+              <li><a class="" href="kutus.php"><span>Kutus Campus</span></a></li>
             </ul>
           </li>
 
@@ -313,6 +313,7 @@ include "config.php";
       <th scope="col">Status</th>
       <th scope="col">View</th>
       <th scope="col">Edit</th>
+      <th scope="col">Print</th>
 
 
     </tr>
@@ -329,17 +330,18 @@ include "config.php";
            <td> <?php echo $rows['adminno'];  ?></td>
             <td> <?php echo $rows['fname']." ".$rows['lname'];  ?></td>
             <td> <?php echo $rows['campus'];  ?></td>
-            <td> <?php echo $rows['course'];  ?></td>
-              <td> <?php echo $rows['idno'];  ?></td>
-            <td> <?php echo $rows['tel'];  ?></td>
-            <td> <?php echo $rows['email'];  ?></td>
-            <td> <?php echo $rows['fees_paid'];  ?></td>
+            <td> <?php echo $rows['class'];  ?></td>
+            <td> <?php echo $rows['pfname']." ".$rows['plname'];  ?></td>
+            <td> <?php echo $rows['active1'];  ?></td>
+            <td> <?php echo $rows['email1'];  ?></td>
+            <td> <?php echo $rows['fees'];  ?></td>
             <?php if( $rows['status']== 'Active')  { ?>
             <td> <a href="update.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-success" ><?php  echo $rows['status']; ?></td> 
               <?php } else { ?>
                <td> <a href="update.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-danger" disabled ><?php  echo $rows['status']; ?></td>  <?php }  ?>
             <td>  <a href="view.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary" >View</td>
             <td>  <a href="edit.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary" >Edit</td>
+              <td>  <a href="tbaletter.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary" >Print</td>
               
             
 

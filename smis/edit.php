@@ -268,9 +268,9 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="kasaranicampus.php">Embu  Campus</a></li>
-              <li><a class="" href="machakoscampus.php"><span>Nairobi Campus</span></a></li>
-              <li><a class="" href="kituicampus.php"><span>Kutus Campus</span></a></li>
+              <li><a class="" href="embu.php">Embu Campus</a></li>
+              <li><a class="" href="Embu.php"><span>Embu Campus</span></a></li>
+              <li><a class="" href="kutus.php"><span>Kutus Campus</span></a></li>
             </ul>
           </li>
 
@@ -315,28 +315,45 @@ include "config.php";
 
   while($row = mysqli_fetch_assoc($result)){
     $studentid = $row['studentid'];
-    $fname = $row['fname'];
+   $fname = $row['fname'];
+    $sname = $row['sname'];
     $lname = $row['lname'];
+    $fschool = $row['fschool'];
+    $nemis = $row['nemis'];
+    $cert = $row['cert'];
     $address = $row['address'];
     $town= $row['town'];
     $county = $row['county'];
     $postal = $row['postal'];
+    $residence = $row['residence'];
+    $disability = $row['disability'];
+    $specify = $row['specify'];
     $grade = $row['grade'];
-    $course = $row['course'];
+    $class = $row['class'];
     $dob = $row['dob'];
     $religion = $row['religion'];
-    $course_duration = $row['course_duration'];
+    $talent = $row['talent'];
     $campus = $row['campus'];
-    $idno = $row['idno'];
+    $assessment = $row['assessment'];
     $paid_by = $row['paid_by'];
     $dateofadmin = $row['dateofadmin'];
     $gender = $row['gender'];
-    $tel = $row['tel'];
-    $email = $row['email'];
-    $adminno = $row['adminno'];
-    $fees_paid = $row['fees_paid'];
-    $admitted_by= $row['admitted_by'];
+    $pfname = $row['pfname'];
+    $psname = $row['psname'];
+    $plname = $row['plname'];
+    $active1 = $row['active1'];
+    $active2 = $row['active2'];
+    $active3 = $row['active3'];
+    $email1 = $row['email1'];
+    $email2 = $row['email2'];
+    $idno = $row['idno'];
+    $occupation = $row['occupation'];
+    $office = $row['office'];
+    $fees = $row['fees'];
+    $mpesa = $row['mpesa'];
     $additional= $row['additional'];
+    $adminno= $row['adminno'];
+    $admitted_by= $row['admitted_by'];
 
     
   }
@@ -355,133 +372,231 @@ include "config.php";
     <h1 class="well">School Registration Form</h1>
   <div class="col-lg-12 well">
   <div class="row">
+    <center> <h3 class="well" style="color: orange">Students Details</h3></center>
         <form action="studentsupdate.php" method="POST">
           <div class="col-sm-12">
-            <div class="row">
-              <div class="col-sm-6 form-group">
+              <div class="row">
+              <div class="col-sm-4 form-group">
                 <label>First Name</label>
-                <input type="text" name="fname" value="<?php echo $fname   ?>" placeholder="Enter First Name Here.." class="form-control">
-              </div>
-              <div class="col-sm-6 form-group">
+                <input type="text"  placeholder="Enter First Name Here.." name="fname" value="<?php echo$fname;?>" class="form-control">
+              </div> 
+
+               
+              <div class="col-sm-4 form-group">
+                <label>Second Name</label>
+                <input type="text" name="sname" value=" <?php echo $sname;  ?> " placeholder="Enter Second Name Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
                 <label>Last Name</label>
-                <input type="text" name="lname" value="<?php echo $lname   ?>" placeholder="Enter Last Name Here.." class="form-control">
-              </div>
-            </div>          
+                <input type="text" name="lname" value=" <?php echo $lname;  ?> " placeholder="Enter Last Name Here.." class="form-control">
+              </div>    
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Former School</label>
+                <input type="text"  placeholder="Enter Former School Here.." name="fschool" value=" <?php echo $fschool;  ?> " class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Nemis upi No.</label>
+                <input type="text" name="nemis" value=" <?php echo $nemis;  ?> " placeholder="Enter Nemis upi No. Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Birth Certificate Entry No.</label>
+                <input type="text" name="cert" value=" <?php echo $cert;  ?> " placeholder="Enter Birth Certificate Entry No. Here.." class="form-control">
+              </div>    
+            </div>
+        
+        
             <div class="form-group">
               <label>Address</label>
-               <input  type="text" name="address" value="<?php echo $address  ?>" class="form-control" rows="3">
-            </div>    
+              <textarea placeholder="Enter Address Here.." name="address" value=" <?php echo $address;  ?> " rows="3" class="form-control"></textarea>
+            </div>  
             <div class="row">
               <div class="col-sm-4 form-group">
                 <label>Town</label>
-                <input type="text"  placeholder="Enter Town Name Here.." name="town" value="<?php echo $town   ?>" class="form-control">
+                <input type="text"  placeholder="Enter Town Name Here.." name="town" value=" <?php echo $town;  ?> " class="form-control">
               </div>  
               <div class="col-sm-4 form-group">
                 <label>County</label>
-                <input type="text" name="county" value="<?php echo $county   ?>" placeholder="Enter County Name Here.."  class="form-control">
+                <input type="text" name="county" value=" <?php echo $county;  ?> " placeholder="Enter County Name Here.."  class="form-control">
               </div>  
               <div class="col-sm-4 form-group">
                 <label>Postal Code</label>
-                <input type="text" name="postal" value="<?php echo $postal   ?>" placeholder="Enter Postal Code Here.." class="form-control">
+                <input type="text" name="postal" value=" <?php echo $postal;  ?> " placeholder="Enter Postal Code Here.." class="form-control">
               </div>    
             </div>
+              <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Place of Residence</label>
+                <input type="text" name="residence" value=" <?php echo $residence;  ?> " placeholder="Enter First Name Here.." class="form-control">
+              </div>
+               <div class="col-sm-6 form-group">
+                <label>Any Disability</label>
+                <input type="text" name="disability" value=" <?php echo $disability;  ?> "  placeholder="Enter Grade Here.." class="form-control">
+              </div>  
+            </div>
+            <div class="form-group">
+              <label>If any Disability Specify Below</label>
+              <textarea placeholder="Enter Disability Here.." name="specify" value=" <?php echo $specify;  ?> " rows="3" class="form-control"></textarea>
+            </div>    
             <div class="row">
               <div class="col-sm-6 form-group">
-                <label>KCSE Grade</label>
-                <input type="text" name="grade" value="<?php echo $grade   ?>" placeholder="Enter Grade Here.." class="form-control">
+                <label>Previous Grade</label>
+                <input type="text" name="grade" value=" <?php echo $grade;  ?> " placeholder="Enter Grade Here.." class="form-control">
               </div>    
               <div class="col-sm-6 form-group">
-                <label>Course</label>
-                <input type="text" name="course" value="<?php echo $course   ?>" placeholder="Enter Grade Here.." class="form-control">
-              </div>
+                <label>Grade / Class</label>
+                <input type="text" name="class" value=" <?php echo $class;  ?> " placeholder="Enter Grade Here.." class="form-control">
+              </div>   
             </div> 
 
             <div class="row">
               <div class="col-sm-6 form-group">
                 <label>Date of Birth.</label>
-                <input type="date" name="dob" value="<?php echo $dob   ?>" placeholder="Enter DoB Here.." class="form-control">
+                <input type="text" name="dob" value=" <?php echo $dob;  ?> " placeholder="Enter DoB Here.." class="form-control">
               </div>    
               <div class="col-sm-6 form-group">
                 <label>Religion</label>
-                <input type="text" name="religion" value="<?php echo $religion   ?>" placeholder="Enter Grade Here.." class="form-control">
-              </div>
+                <input type="text" name="religion" value=" <?php echo $religion;  ?> " placeholder="Enter DoB Here.." class="form-control">
+              </div>  
             </div>
 
 
             <div class="row">
+
               <div class="col-sm-6 form-group">
-                <label>Course Duration</label>
-                <input type="text" name="course_duration" value="<?php echo $course_duration   ?>" placeholder="Enter Duration Here.." class="form-control">
-              </div>    
+                <label>Pupil Talent</label>
+                <input type="text" name="talent" value=" <?php echo $talent;  ?> " placeholder="Enter DoB Here.." class="form-control">
+              </div> 
+   
               <div class="col-sm-6 form-group">
                 <label>Campus</label>
-                <input type="text" name="campus" value="<?php echo $campus   ?>" placeholder="Enter Grade Here.." class="form-control">
-              </div>
+                <input type="text" name="campus" value=" <?php echo $campus;  ?> " placeholder="Enter DoB Here.." class="form-control">
+              </div> 
             </div>  
 
 
              <div class="row">
               <div class="col-sm-6 form-group">
-                <label>ID No.</label>
-                <input type="text" name="idno" value="<?php echo $idno   ?>" placeholder="Enter ID Here.." class="form-control">
+                <label> Assessment No.</label>
+                <input type="text" name="assessment" value=" <?php echo $assessment;  ?> " placeholder="Enter Assessment No. Here.." class="form-control">
               </div>    
               <div class="col-sm-6 form-group">
-                <label>Fees Paid By</label>
-                <input type="number" name="paid_by" value="<?php echo $paid_by   ?>" placeholder="Enter Grade Here.." class="form-control">
-              </div>
+                <label> Fees Paid By:</label>
+                <input type="text" name="paid_by" value=" <?php echo $paid_by;  ?> " placeholder="Enter Assessment No. Here.." class="form-control">
+              </div>  
             </div> 
 
 
             <div class="row">
               <div class="col-sm-6 form-group">
                 <label>Date of Admission</label>
-               <input  type="date" name="dateofadmin" value="<?php echo $dateofadmin   ?>" class="form-control" placeholder="Enter Date of Admission">
+               <input  type="text" name="dateofadmin" value=" <?php echo $dateofadmin;  ?> " class="form-control" placeholder="Enter Date of Admission">
               </div>   
-             <div class="col-sm-6 form-group">
+              <div class="col-sm-6 form-group">
                 <label>Gender</label>
-                <input type="text" name="gender" value="<?php echo $gender   ?>" placeholder="Enter Grade Here.." class="form-control">
-              </div>
-            </div>        
-          <div class="form-group">
-            <label>Active Phone Number</label>
-            <input type="text" name="tel" value="<?php echo $tel   ?>" placeholder="Enter Phone Number Here.." class="form-control">
-          </div>    
-          <div class="form-group">
-            <label>Active Email Address</label>
-            <input type="text" name="email" value="<?php echo $email   ?>" placeholder="Enter Email Address Here.." class="form-control">
-          </div>  
-          <div class="form-group">
-            <label>Admission No.</label>
-            <input type="text" name="adminno" value="<?php echo $adminno  ?>" placeholder="Enter Admission No. Here.." class="form-control">
+               <input  type="text" name="gender" value=" <?php echo $gender;  ?> " class="form-control" placeholder="Enter Date of Admission">
+              </div>  
+            </div>
+            <div class="form-group">
+            <label> <strong style="color: red"> Admission Number (Don't Edit) </strong> </label>
+            <input type="text" name="adminno" value=" <?php echo $adminno;  ?> "  placeholder="E.g Tr. Dan" class="form-control">
           </div>
+            <center> <h3 class="well" style="color: orange">Parents | Guardian Details</h3></center>
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>First Name</label>
+                <input type="text"  placeholder="Enter First Name Here.." name="pfname" value=" <?php echo $pfname;  ?> " class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Second Name</label>
+                <input type="text" name="psname" value=" <?php echo $psname;  ?> " placeholder="Enter Second Name Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Last Name</label>
+                <input type="text" name="plname" value=" <?php echo $plname;  ?> " placeholder="Enter Last Name Here.." class="form-control">
+              </div>    
+            </div>
 
-          <div class="row">
+            
+
+
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Active Number 1</label>
+                <input type="text"  placeholder="Enter Active Number 1 Here.." name="active1" value=" <?php echo $active1;  ?> " class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Active Number 2</label>
+                <input type="text" name="active2" value=" <?php echo $active2;  ?> " placeholder="Enter Active Number 2 Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Active Number 3</label>
+                <input type="text" name="active3" value=" <?php echo $active3;  ?> " placeholder="Enter Active Number 3 Here.." class="form-control">
+              </div>    
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Active Email 1</label>
+                <input type="text" name="email1" value=" <?php echo $email1;  ?> " placeholder="Enter Email 1 Here.." class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Active Email 2</label>
+                <input type="text" name="email2" value=" <?php echo $email2;  ?> " placeholder="Enter Email 2 Here.." class="form-control">
+              </div> 
+            </div>
+
+             <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>ID Number</label>
+                <input type="text"  placeholder="Enter ID Number Here.." name="idno" value=" <?php echo $idno;  ?> " class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Occupation</label>
+                <input type="text" name="occupation" value=" <?php echo $occupation;  ?> " placeholder="Enter Occupation Here.."  class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Office Line</label>
+                <input type="text" name="office" value=" <?php echo $office;  ?> " placeholder="Enter Office Line Here.." class="form-control">
+              </div>    
+            </div>
+
+            <div class="row">
               <div class="col-sm-6 form-group">
                 <label>Fees Paid</label>
-               <input  type="text" name="fees_paid" value="<?php echo $fees_paid  ?>" class="form-control" placeholder="ksh.1,000.00">
-              </div>   
-             <div class="col-sm-6 form-group">
-                <label>Admitted By:</label>
-               <input  type="text" name="admitted_by" value="<?php echo $admitted_by   ?>" class="form-control" placeholder="Mr.kelvin">
+                <input type="text" name="fees" value=" <?php echo $fees;  ?> " placeholder="Enter Fees Paid e.g 1000.00" class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Confirmation Message</label>
+                <input type="text" name="mpesa" value=" <?php echo $mpesa;  ?> " placeholder="Paste Empesa Message Here.." class="form-control">
               </div> 
-            </div> 
-            <div class="form-group">
-              <label>Additional Information</label>
-               <input  type="text" name="additional" value="<?php echo $additional  ?>" class="form-control" placeholder="ksh.1,000.00">
-            </div>   
-            <div class="form-group">
-              <label>Primary Key <b style="color: red">(Dont Edit)</b></label>
-               <input  type="text" name="studentid" value="<?php echo $studentid  ?>" class="form-control" placeholder="ksh.1,000.00">
-            </div>     
+            </div>
 
-          <button type="update" name="update" class="btn btn-lg btn-info">Save Changes</button>         
+            <div class="form-group">
+            <label>Admitted By</label>
+            <input type="text" name="admitted_by" value=" <?php echo $admitted_by;  ?> "  placeholder="E.g Tr. Dan" class="form-control">
+          </div>
+          <div class="form-group">
+            <label><strong style="color: red"> Primary Key (Don't Edit This)</strong> </label>
+            <input type="text" name="studentid" value=" <?php echo $studentid;  ?> "  placeholder="E.g Tr. Dan" class="form-control">
+          </div>
+
+
+
+             <div class="form-group">
+              <label>Additional Information</label>
+              <textarea placeholder="Enter information Here.." name="additional" value=" <?php echo $additional;  ?> " rows="3" class="form-control"></textarea>
+            </div>       
+
+          <button type="update" name="update" class="btn btn-lg btn-info">Change Updates</button>         
           </div>
         </form> 
         </div>
   </div>
   </div>
 <!-- end -->
-
 
 
 

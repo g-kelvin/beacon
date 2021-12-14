@@ -267,9 +267,9 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="kasaranicampus.php">Embu  Campus</a></li>
-              <li><a class="" href="machakoscampus.php"><span>Nairobi Campus</span></a></li>
-              <li><a class="" href="kituicampus.php"><span>Kutus Campus</span></a></li>
+              <li><a class="" href="embu.php">Embu Campus</a></li>
+              <li><a class="" href="Embu.php"><span>Embu Campus</span></a></li>
+              <li><a class="" href="kutus.php"><span>Kutus Campus</span></a></li>
             </ul>
           </li>
 
@@ -285,7 +285,8 @@ include "config.php";
         <div class="row">
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa fa-bars"></i> View All Data <br>
-             <a href="cookery.php" type="button" class="btn btn-danger" style="text-transform: capitalize;">Go Back</a>          
+             <a href="display.php" type="button" class="btn btn-danger" style="text-transform: capitalize;">Go Back</a>   
+              <div class="col"><a href="show.php?id=<?php echo "'".implode("','",$ids)."'" ?>"><button type="button" class="btn btn-primary">Download Report</button></a></div>       
             </h3>            <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="fa fa-bars"></i>Pages</li>
@@ -301,31 +302,49 @@ include "config.php";
     {
     $feedback="SELECT * from students where studentid = $studid  ";
       $rest= mysqli_query($con,$feedback);
-      while($rows= mysqli_fetch_assoc($rest)){
+      while($row= mysqli_fetch_assoc($rest)){
        
-        $fname = $rows['fname'];
-        $lname = $rows['lname'];
-        $address = $rows['address'];
-        $town= $rows['town'];
-        $county = $rows['county'];
-        $postal = $rows['postal'];
-        $grade = $rows['grade'];
-        $course = $rows['course'];
-        $dob = $rows['dob'];
-        $religion = $rows['religion'];
-        $course_duration = $rows['course_duration'];
-        $campus = $rows['campus'];
-        $idno = $rows['idno'];
-        $paid_by = $rows['paid_by'];
-        $dateofadmin = $rows['dateofadmin'];
-        $gender = $rows['gender'];
-        $tel = $rows['tel'];
-        $email = $rows['email'];
-        $adminno = $rows['adminno'];
-        $fees_paid = $rows['fees_paid'];
-        $admitted_by= $rows['admitted_by'];
-        $additional= $rows['additional'];
-        $status= $rows['status'];
+         $studentid = $row['studentid'];
+         $status = $row['status'];
+   $fname = $row['fname'];
+    $sname = $row['sname'];
+    $lname = $row['lname'];
+    $fschool = $row['fschool'];
+    $nemis = $row['nemis'];
+    $cert = $row['cert'];
+    $address = $row['address'];
+    $town= $row['town'];
+    $county = $row['county'];
+    $postal = $row['postal'];
+    $residence = $row['residence'];
+    $disability = $row['disability'];
+    $specify = $row['specify'];
+    $grade = $row['grade'];
+    $class = $row['class'];
+    $dob = $row['dob'];
+    $religion = $row['religion'];
+    $talent = $row['talent'];
+    $campus = $row['campus'];
+    $assessment = $row['assessment'];
+    $paid_by = $row['paid_by'];
+    $dateofadmin = $row['dateofadmin'];
+    $gender = $row['gender'];
+    $pfname = $row['pfname'];
+    $psname = $row['psname'];
+    $plname = $row['plname'];
+    $active1 = $row['active1'];
+    $active2 = $row['active2'];
+    $active3 = $row['active3'];
+    $email1 = $row['email1'];
+    $email2 = $row['email2'];
+    $idno = $row['idno'];
+    $occupation = $row['occupation'];
+    $office = $row['office'];
+    $fees = $row['fees'];
+    $mpesa = $row['mpesa'];
+    $additional= $row['additional'];
+     $adminno= $row['adminno'];
+      $admitted_by= $row['admitted_by'];
        
          }
 
@@ -346,6 +365,7 @@ include "config.php";
             <br>
             <h4 style="color: blue">Name: <?php echo $fname ." ". $lname;  ?> </h4>
             <h4 style="color: blue">Status: <?php echo $status ;  ?> </h4>
+           
           </div>
           <div class="col-6 col-md-4">
             <B> BIO-DATA </B> <br> <hr>
@@ -354,17 +374,48 @@ include "config.php";
             <b style="color: blue">ID Number:</b> <?php echo $idno ?><br>
             <b style="color: blue">Admission Number:</b> <?php echo $adminno ?><br>
             <b style="color: blue">Religion:</b> <?php echo $religion ?><br>
-              <b style="color: blue">K.C.S.E Grade:</b> <?php echo $grade ?><br>
+              <b style="color: blue">Previous Grade:</b> <?php echo $grade ?><br>
 
           </div>
           <div class="col-6 col-md-4">
              <B> CONTACT INFORMATION </B> <br> <hr>
-             <b style="color: blue">Phone Number:</b> <?php echo $tel ?><br>
-             <b style="color: blue">Email:</b> <?php echo $email ?><br>
+             <b style="color: blue">Phone Number:</b> <?php echo $active1 ?><br>
+             <b style="color: blue">Email1:</b> <?php echo $email1 ?><br>
              <b style="color: blue">Postal Code:</b> <?php echo $postal ?><br>
              <b style="color: blue">Physical Address:</b> <?php echo $address ?><br>
              <b style="color: blue">County:</b> <?php echo $county ?><br>
              <b style="color: blue">Town:</b> <?php echo $town ?><br>
+          </div>
+        </div>
+
+         <div class="row">
+
+           <hr>
+          <div class="col-6 col-md-4">
+            <B> ABOUT PUPIL </B> <br> <hr>
+            <b style="color: blue">Former School:</b> <?php echo $fschool ?> <br>
+            <b style="color: blue">Birth Certificate No:</b> <?php echo $cert ?><br>
+            <b style="color: blue">Nemis No:</b> <?php echo $nemis ?><br>
+            <b style="color: blue">Residence:</b> <?php echo $residence ?><br>
+            <b style="color: blue">Assessment:</b> <?php echo $assessment ?><br>
+            <b style="color: blue">Any Disability:</b> <?php echo $disability ?><br>
+
+          </div>
+          <div class="col-6 col-md-4">
+            <B> PARENT INFORMATION </B> <br> <hr>
+          <b style="color: blue">Parents Name:</b> <?php echo $fname ." ". $lname;  ?> <br>
+            <b style="color: blue">Occupation:</b> <?php echo $occupation ?><br>
+            <b style="color: blue">ID Number:</b> <?php echo $idno ?><br>
+            <b style="color: blue">Residence:</b> <?php echo $residence ?><br>
+              <b style="color: blue">Office Line:</b> <?php echo $office ?><br>
+
+          </div>
+          <div class="col-6 col-md-4">
+             <B> SECONDARY CONTACTS </B> <br> <hr>
+             <b style="color: blue">Active Sim 2:</b> <?php echo $active2 ?><br>
+             <b style="color: blue">Active Sim 3:</b> <?php echo $active3 ?><br>
+             <b style="color: blue">Email 2:</b> <?php echo $email2 ?><br>
+    
           </div>
         </div>
         <hr>
@@ -374,9 +425,9 @@ include "config.php";
         <div class="col-6 col-md-4" style="background-color: blue"><br><br>
            <B style="color: white"> COURSE INFORMATION </B> <br> <hr>
            <b style="color: white">Campus:</b> <?php echo "<i style ='color:black'>". $campus ."</i>" ?><br>
-           <b style="color: white">Course:</b> <?php echo "<i style ='color:black'>". $course ."</i>" ?><br>
-           <b style="color: white">Fees Paid:</b> <?php echo "<i style ='color:black'>". $fees_paid ."</i>" ?><br>
-           <b style="color: white">Course Duration:</b> <?php echo "<i style ='color:black'>". $course_duration ."</i>" ?><br>
+           <b style="color: white">Class | Grade:</b> <?php echo "<i style ='color:black'>". $class ."</i>" ?><br>
+           <b style="color: white">Fees Paid:</b> <?php echo "<i style ='color:black'>". $fees ."</i>" ?><br>
+           <b style="color: white">Pupil Talent:</b> <?php echo "<i style ='color:black'>". $talent ."</i>" ?><br>
 
 
 

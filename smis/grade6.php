@@ -268,9 +268,9 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="kasaranicampus.php">Embu  Campus</a></li>
-              <li><a class="" href="machakoscampus.php"><span>Nairobi Campus</span></a></li>
-              <li><a class="" href="kituicampus.php"><span>Kutus Campus</span></a></li>
+             <li><a class="" href="embu.php">Embu Campus</a></li>
+              <li><a class="" href="Embu.php"><span>Embu Campus</span></a></li>
+              <li><a class="" href="kutus.php"><span>Kutus Campus</span></a></li>
             </ul>
           </li>
 
@@ -295,11 +295,13 @@ include "config.php";
             <a href="grade4.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Grade 4</a>
             <a href="grade5.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Grade 5</a>
             <a href="grade6.php" type="button" class="btn btn-warning" style="text-transform: capitalize;" > Grade 6</a>
+            <a href="class7.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Class 7</a>
+            <a href="class8.php" type="button" class="btn btn-primary" style="text-transform: capitalize;" > Class 8</a>
             <br><br>
 
             <?php 
                           
-                            $feedback="SELECT * from students WHERE status = 'Active' AND Course = 'Grade 6' ORDER BY studentid DESC  LIMIT 10 ";
+                            $feedback="SELECT * from students WHERE status = 'Active' AND class = 'Grade 6' ORDER BY studentid DESC  LIMIT 10 ";
                             if ($result=mysqli_query($con,$feedback))
                             {
                             // Return the number of rows in result set
@@ -333,6 +335,7 @@ include "config.php";
       <th scope="col">Status</th>
       <th scope="col">View</th>
       <th scope="col">Edit</th>
+      <th scope="col">Print</th>
 
     </tr>
   </thead>
@@ -340,7 +343,7 @@ include "config.php";
 
   <?php
    
-    $feedback="SELECT * from students WHERE status = 'Active' AND Course = 'Grade 6' ";
+    $feedback="SELECT * from students WHERE status = 'Active' AND class = 'Grade 6' ";
       $rest= mysqli_query($con,$feedback);
       while($rows= mysqli_fetch_assoc($rest)){
          ?> 
@@ -348,18 +351,18 @@ include "config.php";
             <td> <?php echo $rows['adminno'];  ?></td>
             <td> <?php echo $rows['fname']." ".$rows['lname'];  ?></td>
             <td> <?php echo $rows['campus'];  ?></td>
-            <td> <?php echo $rows['course'];  ?></td>
-              <td> <?php echo $rows['idno'];  ?></td>
-            <td> <?php echo $rows['tel'];  ?></td>
-            <td> <?php echo $rows['email'];  ?></td>
-            <td> <?php echo $rows['fees_paid'];  ?></td>
+            <td> <?php echo $rows['class'];  ?></td>
+              <td> <?php echo $rows['pfname']." ".$rows['plname'];  ?></td>
+            <td> <?php echo $rows['active1'];  ?></td>
+            <td> <?php echo $rows['email1'];  ?></td>
+            <td> <?php echo $rows['fees'];  ?></td>
             <?php if( $rows['status']== 'Active')  { ?>
             <td> <a href="update.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-success" ><?php  echo $rows['status']; ?></td> 
               <?php } else { ?>
                <td> <a href="update.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-danger" disabled ><?php  echo $rows['status']; ?></td>  <?php }  ?>
                 <td>  <a href="view.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary" >View</td>
             <td>  <a href="edit.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary" >Edit</td>
-            
+              <td>  <a href="tbaletter.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary" >Print</td>
 
          </tr> 
 

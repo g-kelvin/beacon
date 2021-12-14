@@ -269,9 +269,9 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="kasaranicampus.php">Kasarani Campus</a></li>
-              <li><a class="" href="machakoscampus.php"><span>Machakos Campus</span></a></li>
-              <li><a class="" href="kituicampus.php"><span>Kitui Campus</span></a></li>
+              <li><a class="" href="embu.php">Embu Campus</a></li>
+              <li><a class="" href="Embu.php"><span>Embu Campus</span></a></li>
+              <li><a class="" href="kutus.php"><span>Kutus Campus</span></a></li>
             </ul>
           </li>
 
@@ -311,7 +311,7 @@ include "config.php";
             <div class="col-sm-4">
               <?php 
                    
-                    $feedback="SELECT SUM(fees_paid) AS totalsum FROM students where status = 'active' AND campus = 'Embu'";
+                    $feedback="SELECT SUM(fees) AS totalsum FROM students where status = 'Active' AND campus = 'Embu'";
                     $rest= mysqli_query($con,$feedback);
                     while($rows= mysqli_fetch_assoc($rest)){
                               
@@ -324,7 +324,7 @@ include "config.php";
 
                <?php 
                    
-                    $feedback="SELECT SUM(fees_paid) AS totalsum FROM students where status = 'active' AND campus = 'Nairobi'";
+                    $feedback="SELECT SUM(fees) AS totalsum FROM students where status = 'active' AND campus = 'Nairobi'";
                     $rest= mysqli_query($con,$feedback);
                     while($rows= mysqli_fetch_assoc($rest)){
                               
@@ -343,7 +343,7 @@ include "config.php";
 
                <?php 
                    
-                    $feedback="SELECT SUM(fees_paid) AS totalsum FROM students where status = 'active' AND campus = 'Kutus'";
+                    $feedback="SELECT SUM(fees) AS totalsum FROM students where status = 'active' AND campus = 'Kutus'";
                     $rest= mysqli_query($con,$feedback);
                     while($rows= mysqli_fetch_assoc($rest)){
                               
@@ -368,14 +368,16 @@ include "config.php";
 <table class="table table-striped table-dark">
   <thead>
     <tr>
-      <th scope="col">Admission No</th>
+     <th scope="col">Admission No</th>
       <th scope="col">Name</th>
       <th scope="col">Campus</th>
-      <th scope="col">Course</th>
+      <th scope="col">Grade/Grade</th>
+      <th scope="col">Parent Name</th>
       <th scope="col">Phone No</th>
       <th scope="col">Email</th>
       <th scope="col">Fees Paid</th>
       <th scope="col">Edit</th>
+    
 
 
     </tr>
@@ -392,10 +394,11 @@ include "config.php";
             <td> <?php echo $rows['adminno'];  ?></td>
             <td> <?php echo $rows['fname']." ".$rows['lname'];  ?></td>
             <td> <?php echo $rows['campus'];  ?></td>
-            <td> <?php echo $rows['course'];  ?></td>
-            <td> <?php echo $rows['tel'];  ?></td>
-            <td> <?php echo $rows['email'];  ?></td>
-            <td> <?php echo $rows['fees_paid'];  ?></td>
+            <td> <?php echo $rows['class'];  ?></td>
+              <td> <?php echo $rows['pfname']." ".$rows['plname'];  ?></td>
+            <td> <?php echo $rows['active1'];  ?></td>
+            <td> <?php echo $rows['email1'];  ?></td>
+            <td> <?php echo $rows['fees'];  ?></td>
             <td> <a href="edit.php?GetID=<?php echo $rows['studentid']  ?>" class="btn btn-primary"  >Edit</td>
            
 

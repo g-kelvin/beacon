@@ -38,7 +38,7 @@
         <div class="container">
              <ul class="nav navbar-nav top_nav">
                 <li><a href="#"><i class="fa fa-phone"></i>+254 720 616 843</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i>info@thebeaconacademy.ac.ke</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i>info@thebeaconacademy.sc.ke</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right social_nav">
                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -123,33 +123,79 @@
         <div class="container">
           
            <?php 
-$con= mysqli_connect("localhost","thebeaco_admin", "7RWMt24Yv+v9*k","thebeaco_thebeacon");
-
+// $con= mysqli_connect("localhost","thebeaco_admin", "7RWMt24Yv+v9*k","thebeaco_thebeacon");
+$con= mysqli_connect("localhost","root", "","beacon");
 if($con){
-  if(isset($_POST['submit'])){
+   if(isset($_POST['submit'])){
     $fname = $_POST['fname'];
+    $sname = $_POST['sname'];
     $lname = $_POST['lname'];
+    $fschool = $_POST['fschool'];
+    $nemis = $_POST['nemis'];
+    $cert = $_POST['cert'];
     $address = $_POST['address'];
     $town= $_POST['town'];
     $county = $_POST['county'];
     $postal = $_POST['postal'];
+    $residence = $_POST['residence'];
+    $disability = $_POST['disability'];
+    $specify = $_POST['specify'];
     $grade = $_POST['grade'];
-    $course = $_POST['course'];
+    $class = $_POST['class'];
     $dob = $_POST['dob'];
     $religion = $_POST['religion'];
-    $course_duration = $_POST['course_duration'];
+    $talent = $_POST['talent'];
     $campus = $_POST['campus'];
-    $idno = $_POST['idno'];
+    $assessment = $_POST['assessment'];
     $paid_by = $_POST['paid_by'];
     $dateofadmin = $_POST['dateofadmin'];
     $gender = $_POST['gender'];
-    $tel = $_POST['tel'];
-    $email = $_POST['email'];
-    $fees_paid = $_POST['fees_paid'];
+    $pfname = $_POST['pfname'];
+    $psname = $_POST['psname'];
+    $plname = $_POST['plname'];
+    $active1 = $_POST['active1'];
+    $active2 = $_POST['active2'];
+    $active3 = $_POST['active3'];
+    $email1 = $_POST['email1'];
+    $email2 = $_POST['email2'];
+    $idno = $_POST['idno'];
+    $occupation = $_POST['occupation'];
+    $office = $_POST['office'];
+    $fees = $_POST['fees'];
+    $mpesa = $_POST['mpesa'];
     $additional= $_POST['additional'];
 
+    $mfname = $_POST['mfname'];
+    $msname = $_POST['msname'];
+    $mlname = $_POST['mlname'];
+    $mactive1 = $_POST['mactive1'];
+    $mactive2 = $_POST['mactive2'];
+    $mactive3 = $_POST['mactive3'];
+    $memail1 = $_POST['memail1'];
+    $memail2 = $_POST['memail2'];
+    $midno = $_POST['midno'];
+    $moccupation = $_POST['moccupation'];
+    $moffice = $_POST['moffice'];
 
-    $qry=mysqli_query( $con," INSERT INTO `students` (`studentid`, `fname`,`lname`, `address`, `town`, `county`, `postal`, `grade`, `course`, `dob`, `religion`, `course_duration`, `campus`, `idno`, `paid_by`, `dateofadmin`, `gender`, `tel`, `email`, `additional` , `status`) VALUES (NULL, '$fname', '$lname', '$address', '$town', '$county', '$postal', '$grade', '$course', '$dob', '$religion', '$course_duration', '$campus', '$idno', '$paid_by', '$dateofadmin', '$gender', '$tel', '$email', '$additional' , 'pending' )" );
+    $gfname = $_POST['gfname'];
+    $gsname = $_POST['gsname'];
+    $glname = $_POST['glname'];
+    $gactive1 = $_POST['gactive1'];
+    $gactive2 = $_POST['gactive2'];
+    $gactive3 = $_POST['gactive3'];
+    $gemail1 = $_POST['gemail1'];
+    $gemail2 = $_POST['gemail2'];
+    $gidno = $_POST['gidno'];
+    $goccupation = $_POST['goccupation'];
+    $goffice = $_POST['goffice'];
+
+    echo "$fname";
+
+
+    $qry=mysqli_query( $con," INSERT INTO `students` (`studentid`, `fname`, `sname`, `lname`, `fschool`, `nemis`, `cert`, `address`, `town`, `county`, `postal`, `residence`, `disability`, `specify`, `grade`, `class`, `dob`, `religion`, `talent`, `campus`, `assessment`, `paid_by`, `dateofadmin`, `gender`, `pfname`, `psname`, `plname`, `active1`, `active2`, `active3`, `email1`, `email2`, `idno`, `occupation`, `office`, `fees`, `mpesa`, `additional`, `adminno`, `status` , `mfname`, `msname`, `mlname`, `mactive1`, `mactive2`, `mactive3`, `memail1`, `memail2`, `midno`, `moccupation`, `moffice` , `gfname`, `gsname`, `glname`, `gactive1`, `gactive2`, `gactive3`, `gemail1`, `gemail2`, `gidno`, `goccupation`, `goffice`) 
+
+        VALUES (NULL, '$fname', '$sname', '$lname', '$fschool', '$nemis', '$cert', '$address', '$town', '$county', '$postal', '$residence', '$disability', '$specify', '$grade', '$class', '$dob', '$religion', '$talent', '$campus', '$assessment', '$paid_by', '$dateofadmin', '$gender', '$pfname', '$psname', '$plname', '$active1', '$active2', '$active3', '$email1', '$email2', '$idno', '$occupation', '$office', '$fees', '$mpesa', '$additional', 'Pending', 'Pending' , '$mfname', '$msname', '$mlname', '$mactive1', '$mactive2', '$mactive3', '$memail1', '$memail2', '$midno', '$moccupation', '$moffice' , '$gfname', '$gsname', '$glname', '$gactive1', '$gactive2', '$gactive3', '$gemail1', '$gemail2', '$gidno', '$goccupation', '$goffice') " );
+
     if($qry)
     {
       echo"<br> <br>Congratulations ".$fname." ".$lname.  " for Enrolling with The Beacon Academy Embu <br> <br> ";
@@ -215,7 +261,7 @@ else{
                     <address>
                         <p>Have questions, comments or just want to say hello:</p>
                         <ul class="my_address">
-                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>info@thebeaconacademy.ac.ke</a></li>
+                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>info@thebeaconacademy.sc.ke</a></li>
                             <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+254 720 616 843</a></li>
                             <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>The Beacon Academy Embu, Embu - Siakago Road, Embu - Kenya </span></a></li>
                         </ul>

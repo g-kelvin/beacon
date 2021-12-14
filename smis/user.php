@@ -11,7 +11,7 @@ if($con){
     if($qry)
     {
     	 
-    	  echo "Account Creation Successful great".header('refresh:0; url=https://kasaranicateringcollege.co.ke/smis/index.php');
+    	  echo "Account Creation Successful great".header('refresh:0.1;url=index.php');;
      
     }
 

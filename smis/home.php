@@ -268,9 +268,9 @@ include "config.php";
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="kasaranicampus.php">Embu  Campus</a></li>
-              <li><a class="" href="machakoscampus.php"><span>Nairobi Campus</span></a></li>
-              <li><a class="" href="kituicampus.php"><span>Kutus Campus</span></a></li>
+              <li><a class="" href="embu.php">Embu Campus</a></li>
+              <li><a class="" href="Embu.php"><span>Embu Campus</span></a></li>
+              <li><a class="" href="kutus.php"><span>Kutus Campus</span></a></li>
             </ul>
           </li>
 
@@ -401,7 +401,7 @@ include "config.php";
                 <!-- Text -->
                 <div class="datas-text"><?php 
                           
-                            $feedback="SELECT * from students WHERE status = 'Active' AND Course = 'Kindergarten' ";
+                            $feedback="SELECT * from students WHERE status = 'Active' AND class = 'Kindergarten' ";
                             if ($result=mysqli_query($con,$feedback))
                             {
                             // Return the number of rows in result set
@@ -419,7 +419,7 @@ include "config.php";
                 <div class="datas-text">
                    <div class="datas-text"><?php 
                            
-                            $feedback="SELECT * from students WHERE status = 'Active' AND Course = 'PP1' ";
+                            $feedback="SELECT * from students WHERE status = 'Active' AND class = 'PP1' ";
                             if ($result=mysqli_query($con,$feedback))
                             {
                             // Return the number of rows in result set
@@ -438,7 +438,7 @@ include "config.php";
                 <div class="datas-text">
                   <?php 
                           
-                            $feedback="SELECT * from students WHERE status = 'Active' AND Course = 'PP2' ";
+                            $feedback="SELECT * from students WHERE status = 'Active' AND class = 'PP2' ";
                             if ($result=mysqli_query($con,$feedback))
                             {
                             // Return the number of rows in result set
@@ -462,7 +462,7 @@ include "config.php";
                 <div class="datas-text">
                   <?php 
                           
-                            $feedback="SELECT * from students WHERE status = 'Active' AND Course = 'Grade 1' ";
+                            $feedback="SELECT * from students WHERE status = 'Active' AND class = 'Grade 1' ";
                             if ($result=mysqli_query($con,$feedback))
                             {
                             // Return the number of rows in result set
